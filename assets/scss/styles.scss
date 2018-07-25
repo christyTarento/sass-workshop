@@ -1,0 +1,17 @@
+$maincolor:#232323;
+$width:1100px;
+$zero:0px;
+$blue: rgb(0,0,255);
+$red: rgb(255,0,0);
+@mixin square($size, $color) {
+    width: $size;
+    height: $size;
+    background-color: $color;
+}
+body { margin: $zero; background-color: $maincolor; padding: $zero;}
+.small-blue-square {
+    @include square(20px, $blue);
+}
+.big-red-square {
+    @include square(300px, $red);
+}
